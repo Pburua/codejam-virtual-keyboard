@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  background: #9c9c9c;
+}
+body main {
+  width: 900px;
+  margin: auto;
+}
+
+#charsfield {
+  font-size: 20px;
+  color: white;
+  background: gray;
+  border: 1px solid white;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: gray;
+}
+.keyboard .keyboard--row {
+  flex: 1;
+  display: flex;
+}
+.keyboard .keyboard--item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 5px;
+  color: white;
+  background: black;
+  user-select: none;
+}
+.keyboard .keyboard--item > * > span {
+  order: 1;
+}
+.keyboard .keyboard--item .keyboard--english,
+.keyboard .keyboard--item .keyboard--russian {
+  display: flex;
+}
+.keyboard .keyboard--item.keyboard--item-fat2 {
+  flex: 2;
+}
+.keyboard .keyboard--item.keyboard--item--fatSpace {
+  flex: 5.5;
+}
+.keyboard .keyboard--item:hover {
+  background: #292929;
+  cursor: pointer;
+}
+.keyboard .keyboard--item .order66 {
+  order: 66;
+  display: none;
+}
+.keyboard .keyboard--item .hidden {
+  display: none;
+}
+.keyboard .keyboard--item.pressed {
+  border-radius: 50%;
+  background: darkred;
+}
+
+/*# sourceMappingURL=style.css.map */
