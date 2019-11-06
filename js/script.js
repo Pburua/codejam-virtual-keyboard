@@ -203,16 +203,24 @@ function SelectAndPrintButton(event) {
             .querySelectorAll('.keyboard--russian>span');
         }
 
-        if ((isCapsPressed && isShiftPressed) || (!isCapsPressed && !isShiftPressed)) {
-          // if (allButtonLiters[0].parentElement.classList.contains('hidden'))
-          //     return;
-          // console.log(allButtonLiters[0]);
+        if (oneButtonLiter.parentElement.parentElement.classList.contains('capsifying')) {
+          if ((isCapsPressed && isShiftPressed) || (!isCapsPressed && !isShiftPressed)) {
+            // if (allButtonLiters[0].parentElement.classList.contains('hidden'))
+            //     return;
+            // console.log(allButtonLiters[0]);
+            Click(allButtonLiters[0]);
+            throw BreakException;
+          } else {
+            // if (allButtonLiters[1].parentElement.classList.contains('hidden'))
+            //     return;
+            // console.log(allButtonLiters[0]);
+            Click(allButtonLiters[1]);
+            throw BreakException;
+          }
+        } else if (!isShiftPressed) {
           Click(allButtonLiters[0]);
           throw BreakException;
         } else {
-          // if (allButtonLiters[1].parentElement.classList.contains('hidden'))
-          //     return;
-          // console.log(allButtonLiters[0]);
           Click(allButtonLiters[1]);
           throw BreakException;
         }
